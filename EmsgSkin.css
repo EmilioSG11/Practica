@@ -358,3 +358,23 @@
 	-webkit-transform:scale(1)!important;
 	transform:scale(1)!important;
 }
+
+/*---Error Display---*/
+.vjs-error .vjs-error-display 
+.vjs-modal-dialog-content {
+	font-size: 2.3em;
+	font-weight: 300;
+	text-align: right;   
+}
+.vjs-error .vjs-error-display:before { 
+	content:"";
+	height: 100%;
+	width: 100%;
+	top: 0;   
+	left: 0;
+	margin: 0;   
+	position: absolute;   
+	background-image: url('https://www.readyartwork.com/wp-content/uploads/2019/02/RAWR-404-Page.gif');  
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
