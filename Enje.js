@@ -404,8 +404,8 @@ var HlsQualitySelectorPlugin = function () {
     var placementIndex = player.controlBar.children().length - 2;
     var concreteButtonInstance = player.controlBar.addChild(this._qualityButton, { componentClass: 'qualitySelector' }, this.config.placementIndex || placementIndex);
 
-    concreteButtonInstance.addClass('vjs-quality-selector');
- concreteButtonInstance.addClass('vjs-quality-selector-on');
+    _this.addClass('vjs-quality-selector');
+ _this.addClass('vjs-quality-selector-on');
    if (!this.config.displayCurrentQuality) {
       var icon = ' ' + (this.config.vjsIconClass || 'vjs-icon-hd');
 
