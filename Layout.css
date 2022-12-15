@@ -1,0 +1,52 @@
+.video-js.vjs-layout-small:not(.vjs-fullscreen) .vjs-captions-button,
+
+.video-js.vjs-layout-small:not(.vjs-fullscreen) .vjs-time-divider,
+
+.video-js.vjs-layout-small:not(.vjs-fullscreen) .vjs-playback-rate,
+
+.video-js.vjs-layout-small:not(.vjs-fullscreen) .vjs-volume-control,
+
+.video-js.vjs-layout-small:not(.vjs-fullscreen) .vjs-chapters-button,
+
+.vjs-layout-small:not(.vjs-fullscreen) .vjs-subs-caps-button,
+
+.vjs-layout-small:not(.vjs-fullscreen) .vjs-subtitles-button {
+    display: none;
+}
+
+
+
+.video-js.vjs-layout-x-small:not(.vjs-fullscreen) .vjs-captions-button,
+
+.video-js.vjs-layout-x-small:not(.vjs-fullscreen) .vjs-time-divider,
+
+.video-js.vjs-layout-x-small:not(.vjs-fullscreen) .vjs-duration,
+
+.video-js.vjs-layout-x-small:not(.vjs-fullscreen) .vjs-playback-rate,
+
+.video-js.vjs-layout-x-small:not(.vjs-fullscreen) .vjs-captions-button,
+
+.vjs-layout-small:not(.vjs-fullscreen) .vjs-subs-caps-button,
+
+.video-js.vjs-layout-x-small:not(.vjs-fullscreen) .vjs-volume-control,
+
+.video-js.vjs-layout-x-small:not(.vjs-fullscreen) .vjs-chapters-button,
+
+.video-js.vjs-layout-x-small:not(.vjs-fullscreen) .vjs-subtitles-button,
+
+.video-js.vjs-layout-x-small:not(.vjs-fullscreen) .vjs-volume-button,
+
+ {
+        display: none;
+}
+
+
+.video-js.vjs-layout-small .vjs-time-control {    
+	display:flex;   
+}
+.video-js.vjs-layout-small .vjs-duration {   
+	display:none;   
+}
+.video-js.vjs-layout-small .vjs-time-divider {   
+	display:none;   
+}
