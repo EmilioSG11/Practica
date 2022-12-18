@@ -1,0 +1,632 @@
+*:focus {       
+	outline: none;
+}
+/*Settings*/
+.vjs-modal-dialog .vjs-modal-dialog-content, 
+.video-js .vjs-modal-dialog, 
+.vjs-button > .vjs-icon-placeholder:before {  
+	display: flex;	
+	align-items: flex-end;    
+	justify-content: center;      
+	position: absolute; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-family: bootstrap-icons, Questrial;
+}
+.video-js {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	box-sizing: border-box;
+	color: #fff;
+	background: #000;
+	position: relative;
+	padding: 0;   
+	font-size: 10px;
+	line-height: 1;
+	font-weight: normal;
+	font-style: normal;
+	font-family: Questrial, Arial, Helvetica;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;  
+	overflow: hidden;    
+}
+
+
+/*---CONTROL BAR---*/
+.video-js .vjs-control-bar {
+	display: none;
+	width: 100%;
+        padding: 0 2%;       
+	position: absolute;     
+	height: 50px;
+	background: rgba(0,0,0,.8);
+	z-index: 7;
+}
+@media screen and (max-width: 740px) {
+.video-js .vjs-control-bar {
+	width: calc( 100% - 0 );
+}}
+
+.vjs-has-started .vjs-control-bar {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;   
+	display: flex;
+	visibility: visible;
+	opacity: 1;
+	transform-origin: left bottom;
+	transition: all .15s cubic-bezier(.15,.16,.71,.71),
+	width 0s, left 0s;
+}
+.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+	visibility: hidden;
+	opacity: 0;    
+	-moz-transform: translate(-10px, 20px);
+	-webkit-transform: translate(-10px, 20px);      
+	transition: .15s cubic-bezier(.15,.16,.71,.71);
+}
+.vjs-controls-disabled .vjs-control-bar,
+.vjs-using-native-controls .vjs-control-bar,
+.vjs-error .vjs-control-bar {   
+	display: none !important;
+}
+
+.vjs-audio.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+	opacity: 1;
+	visibility: visible;
+}
+@media screen {
+.vjs-user-inactive.vjs-playing       .vjs-control-bar:before {	
+	content: "";}}
+.vjs-has-started.vjs-no-flex .vjs-control-bar { 
+	display: table;
+}
+
+
+/*---CONTROL---*/
+.video-js .vjs-control {
+        position: relative;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 4em;
+        flex: none;
+        font-family: Questrial,
+}
+.video-js .vjs-control:before {
+	font-size: 150%;	
+	color: #fff;
+}
+.video-js .vjs-control-text {   
+	border: 0;   
+	clip: rect(0 0 0 0);
+	height: 11px;         
+	margin: 0;   
+	overflow: hidden;   
+	visibility: hidden;   
+	padding: 0;   
+	position: absolute;
+	width: 1px;
+}
+.vjs-no-flex .vjs-control {
+	display: table-cell;
+	vertical-align: middle;
+}
+.video-js .vjs-custom-control-spacer {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;    
+	display: flex;
+	-webkit-box-flex: 1 1 auto;
+	-moz-box-flex: 1 1 auto;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+}
+
+
+/*Seek To Live Control*/
+@keyframes blink { 
+	from {opacity: 0;}
+  100% {opacity: 1;}
+  75% {opacity: 1;}
+  to {opacity: 0;}}
+
+.video-js .vjs-seek-to-live-control {  
+	font-weight: 400;
+	cursor: pointer;
+	padding: 0 10px;   
+	width:auto;   
+	background: transparent;
+	border: 0;
+	outline:none;
+	height:100%;
+}
+.video-js .vjs-seek-to-live-control .vjs-icon-placeholder:before {
+	display: inline-block;
+	font-family: bootstrap-icons;
+	font-size: 1.04em;
+	font-weight: bold;
+	content: '\f1d6';         
+	margin-right: 2px;  
+	animation: blink 1000ms 0s ease infinite;
+	animation: blink 1000ms 0s ease infinite;
+}
+
+
+/*-----------ICONS-----------*/
+.video-js .vjs-button {   
+	cursor: pointer;   
+	width: 39px;
+	-webkit-transition: all .2s ease 0s;
+        transition: all .2s ease 0s; 
+	vertical-align: middle
+}
+
+.vjs-button > .vjs-icon-placeholder:before {  
+	display: flex;
+	align-items: center;
+	align-items: center;
+	justify-content: center;
+	font-family: bootstrap-icons;
+}
+
+/*---Play - Pause---*/
+.video-js .vjs-play-control {  
+	color: #ff0048;
+	z-index: 99;
+}  
+.vjs-icon-play:before, .video-js .vjs-play-control .vjs-icon-placeholder:before  {  
+	content: "\F4F3";  
+}
+.vjs-icon-pause:before, .video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder:before {
+	content: "\F4C2";  
+}
+
+/*---Volume---*/
+.video-js .vjs-mute-control.vjs-vol-0 
+.vjs-icon-placeholder:before, .vjs-icon-volume-mute:before {      
+	content: "\f60d";
+	color: #ff0048;
+}
+.video-js .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder:before,.vjs-icon-volume-low:before {      
+	content: "\f60f";    
+}
+.video-js .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder:before,.vjs-icon-volume-medium:before {
+	content: "\f60b";    
+}
+.video-js .vjs-mute-control.vjs-vol-3 .vjs-icon-placeholder:before,.vjs-icon-volume-high:before {   
+	content: "\f611";    
+}
+
+/*---Fullscreen---*/
+.video-js .vjs-fullscreen-control {  
+	cursor: pointer;        
+	float: right; 
+	color: #ff0048;
+	font-size: 0.9em;
+	z-index: 97;
+}
+.vjs-icon-fullscreen-enter:before, .video-js .vjs-fullscreen-control .vjs-icon-placeholder:before {
+	content: "\F14A" ;  
+}
+.vjs-icon-fullscreen-exit:before, .video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder:before {
+	content: "\F149";  
+}  
+
+/*---Picture in Picture---*/
+.emsg-skin .vjs-picture-in-picture-control {    
+	z-index: 7;
+	font-size: 0.9em; 
+}
+.vjs-icon-picture-in-picture-enter:before, .video-js .vjs-picture-in-picture-control .vjs-icon-placeholder:before {
+	content: "\F4EF";  
+}
+.vjs-icon-picture-in-picture-exit:before, .video-js.vjs-picture-in-picture .vjs-picture-in-picture-control .vjs-icon-placeholder:before {
+	content: "\f4ee";
+	color:#ff0048;
+}
+
+/*---Share---*/
+.video-js  .vjs-icon-share {
+	font-family: bootstrap-icons;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 0.9em;
+}
+.vjs-icon-share:before {
+  content: "\f52e";  
+}
+
+/*---HLS Quality Selector---*/
+.emsg-skin .vjs-quality-selector {   
+	font-size: 0.85em;           
+	z-index: 7;
+}  
+.video-js  .vjs-quality-selector .vjs-icon-placeholder:before {
+	content: "\F3e5";    
+}
+
+/*---Subtitles---*/
+.video-js .vjs-subs-caps-button .vjs-icon-placeholder {
+	font-size: 0.858em;  
+	cursor: pointer;
+}
+.video-js .vjs-subs-caps-button .vjs-icon-placeholder:before {   
+	content: "\f165";   
+}
+
+
+/*---Time Control---*/
+.video-js .vjs-time-control { 
+	display: flex;
+	align-items: center; 
+	justify-content:center;       
+}
+.video-js .vjs-current-time,
+.video-js .vjs-duration, .vjs-remaing-time {  
+	width:  auto !important;
+	line-height: normal;     
+	padding: 1px 7px 0 8px;
+	margin: 0 0;   
+	margin: 0 0;
+	
+}
+.video-js .vjs-remaining-time {   
+	float: left;
+	line-height: 40px; 
+	line-height: normal;   
+}
+.video-js .vjs-current-time {  
+	margin-right: 0;
+	line-height: 40px; 
+	line-height: normal;     
+}
+.video-js .vjs-duration-display {  
+	margin-left: 0
+}
+.vjs-time-divider {      
+	display:flex; 
+	align-items: center;
+	justify-content: center;
+	margin: 4px -15px 0 -14px;
+	color: rgba(255, 255, 255, 0.5);  
+	border-radius: 5px;   
+  }
+.vjs-time-divider div  span {  
+	font-size: 160%;
+	font-weight: bolder;
+	color: #ff0048;
+	text-align: center;
+}
+.video-js .vjs-remaining-time {      
+	display: none
+}
+
+
+/*---Progress Control---*/
+.video-js .vjs-control-bar .vjs-progress-control { 
+	/*
+	position:absolute;
+	height: 1em;   
+	margin: -0.751em 0;*/
+	width: 100%;    
+	left: 0;    
+	background-color: transparent;    
+	-webkit-flex: auto;
+	flex: auto;
+	display: flex;
+}
+.video-js .vjs-load-progress {
+	background: rgba(255, 0, 72, 1.0);
+}
+.video-js .vjs-load-progress div {
+	background: rgba(255, 0, 72, 0.0);
+}
+
+.video-js .vjs-play-progress {
+	background: #FFF;
+	border-radius: 10px;
+	transition: all .25s linear;
+}
+.video-js .vjs-progress-control .vjs-play-progress:before {   
+	background: #fff;
+	content:"";  
+	height: 2px;  
+	width: 2px;  
+	right: 0;
+	top: 1px;      
+	opacity: 0;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-transition: all .3s ease 0s;
+	transition: all .3s ease 0s;  
+	transform-origin: center;
+}
+.video-js .vjs-progress-control:hover .vjs-play-progress:before {
+	-webkit-transform: scale(5);
+	transform: scale(5);     
+	opacity: 9.0;   
+	background: #ff0048;
+}
+/*.video-js .vjs-progress-control .vjs-play-progress:before {
+	-webkit-transform: scale(5);
+	transform: scale(5);  
+	opacity: 9;  
+	color: #fff;
+}*/
+/*^^^uncomment last setting if you want progress circle always visible^^^*/
+
+.video-js .vjs-progress-holder .vjs-play-progress,
+.video-js .vjs-progress-holder .vjs-load-progress,
+.video-js .vjs-progress-holder .vjs-load-progress div {
+	position: absolute;
+	display: block;
+	height: 5px;
+	margin: 0;
+	padding: 0;
+	width: 0;
+	left: 0;
+	top: 0;
+	border-radius: 5px;
+}
+.video-js .vjs-progress-holder {
+	-webkit-box-flex: auto;
+	-moz-box-flex: auto;   
+	-webkit-flex: auto;   
+	-ms-flex: auto;
+	flex: auto;   
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	height: 5px;     
+	border-radius: 5px;    
+	box-shadow: 0 0 10px 0.9px rgba(0,0,0,0.2); 
+}
+.video-js.vjs-user-inactive .vjs-progress-control .vjs-mouse-display {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: visibility 1s, opacity 1s;
+	transition: visibility 1s, opacity 1s
+}
+
+
+/*---MENU---*/
+  /*---Menu---*/
+.video-js .vjs-menu-button .vjs-hidden {  
+	display:block!important;    
+	-webkit-transform:scale(0);
+	transform:scale(0);
+}
+
+.vjs-menu li {
+	text-transform: capitalize;
+	font-family: Questrial;
+	font-size: 9px;   
+	width: 100%; 
+	padding: 0.35em;   
+	color: #fff;
+	border-radius:2px;   
+	transition: all 0.15s ease;    
+}
+ul li::before {
+	content: "";   
+	display: inline-block;
+	width: 0.4em;
+	padding-left: 0.4em;
+	margin-left: 0;  
+	color: red;     
+}
+.vjs-menu li:hover {
+	color: #fff;
+	font-weight: 700;
+}
+
+.vjs-menu li.vjs-selected,
+.vjs-menu li.vjs-selected:focus,
+.vjs-menu li.vjs-selected:hover {
+	color: white;
+	font-family: Questrial;
+	font-weight: 700;
+	background: rgb(255, 255, 255, 0.15);
+}
+
+.vjs-menu li.vjs-menu-item:focus {
+	background: rgb(255, 255, 255, 0.0);
+}
+.vjs-menu li.vjs-menu-item:hover {
+	background: rgb(255, 255, 255, 0.0);
+}
+.vjs-menu li.vjs-menu-title {
+	text-transform: uppercase;
+	font-size: 1em;
+	line-height: 0;
+	font-weight: 700;
+	cursor: default;
+}
+
+.vjs-menu-button-popup .vjs-menu {      
+	display:block;  
+	position: absolute;  
+	width: 10em;
+	left: -3em;
+	height: 999em;
+	margin-bottom: 1.5em;
+	bottom: 0;  	
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transform-origin: bottom center;
+	transform-origin: bottom center;
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+.vjs-menu-button-popup .vjs-menu .vjs-menu-content {
+	position: absolute;
+	background: rgb(0, 0, 0, 0.98); 
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 10px rgba(0, 0, 0, 0.3); 
+	border-radius: 8.3px;   
+	margin: 0;
+	padding: 1em 0 1em 0;
+	color: #fff;
+	font-size: 100%;    
+	font-weight: 400;
+	z-index: 999999999999999999999999999999;
+}
+.vjs-lock-showing {
+	display:block;    
+	-webkit-transform:scale(1)!important;
+	transform:scale(1)!important;       
+}
+
+
+/*---BUTTONS MENU---*/
+/*Quality Selector Menu*/
+.video-js  .vjs-quality-selector .vjs-menu {
+	position: absolute;   
+	width: 140px;      
+	left: -6em;   
+	bottom: 3.42em;   
+	border-top-color: rgba(43, 51, 63, 1);
+	z-index: 500;
+}    
+.video-js  .vjs-quality-selector 
+.vjs-menu  li.vjs-menu-title {
+	font-family: Questrial;   
+	font-size: 9px;
+	font-weight: 890;
+	text-align: center;
+	padding-top: 3px;
+	padding-bottom:9px;   
+	line-height: 10px;
+	border-bottom: 1px solid rgb(255, 0, 72, 0.9);
+  }
+ .emsg-skin .vjs-quality-selector
+ .vjs-menu ul li.vjs-menu-title::after  {   
+   font-family: bootstrap-icons;
+   content: "\F514"; 
+   color: #ff0048;   
+   font-weight: bold;
+   position: absolute;
+   text-align: right;
+   right: 100px;
+   font-size: 11px;
+   background-image: url();
+   border: none;  
+  }   
+.video-js  .vjs-quality-selector
+.vjs-menu li.vjs-selected {
+	font-family: Questrial;
+	font-weight: 700;
+	text-align: center;
+	background: rgb(255, 255, 255, 0.1);
+}
+.video-js  .vjs-quality-selector 
+.vjs-menu li.vjs-selected:hover {
+	font-family: Questrial;
+	font-weight: bolder;
+	text-align: center;
+	background: rgb(255, 255, 255, 0.1);
+}
+.video-js  .vjs-quality-selector 
+.vjs-menu li.vjs-selected:focus { 
+	font-family: Questrial;
+	text-align: center;
+	font-weight: 700;
+	background: rgb(255, 255, 255, 0.1);
+}
+.video-js  .vjs-quality-selector .vjs-menu ul li.vjs-selected::before {
+	display: inline-block;
+	font-family: bootstrap-icons;
+	font-size: 0.8em;
+	font-weight: bold;
+	width: 2.5em;
+	margin-left: -2em;
+	color: #ff0048;
+	content: "\F26A";
+}
+
+/*Subs Caps Menu*/
+.video-js .vjs-subtitles-button .vjs-menu, 
+.video-js .vjs-subs-caps-button .vjs-menu {
+	position: absolute;
+	background: rgb(0, 0, 0, 0.868);
+	bottom: 0;
+	left: -5.5em;
+	height: 0;
+	margin-bottom: 4em;
+	width: 150px;
+	border-top-color: rgba(0, 0, 0, 1);
+	z-index: 500;
+}
+.video-js .vjs-subs-caps-button + 
+.vjs-menu .vjs-captions-menu-item 
+.vjs-menu-item-text .vjs-icon-placeholder:before {   
+	font-family: VideoJS;
+	content: "";
+	color: #ff0048;
+	line-height: inherit;
+}
+.video-js .vjs-descriptions-button .vjs-menu {
+	position: absolute;
+	bottom: 0;
+	left: -13em;
+	height: 0;
+	margin-bottom: 3.5em;
+	width: 200px;
+	border-top-color: rgba(43, 51, 63, 1);
+	z-index: 500;
+}
+
+
+/*---Error Display---*/
+.vjs-error .vjs-error-display 
+.vjs-modal-dialog-content {
+	font-size: 1.9em;
+	font-weight: 300;
+	text-align: right;   
+}
+.vjs-error .vjs-error-display:before {
+	content:"";
+	height: 100%;
+	width: 100%;
+	top: 0;   
+	left: 0;
+	margin: 0;
+	position: absolute;
+	background-image: url('https://www.readyartwork.com/wp-content/uploads/2019/02/RAWR-404-Page.gif');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.video-js ul::-webkit-scrollbar {
+	width: 5px;
+}
+.video-js ul::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.video-js ul::-webkit-scrollbar-thumb {      
+	border-radius: 5px;  
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;   
+	background: #ff0048;
+}
+
+.video-js.vjs-live .vjs-time-control{display:none;}
+.video-js.vjs-live .vjs-progress-control{display:none;}
+
+
+.video-js.vjs-videojs-share_open .vjs-modal-dialog .vjs-close-button{position:absolute;right:0;top:5px;width:30px;height:30px;color:#fff;cursor:pointer;opacity:.9;z-index:11;transition:opacity 0.25s ease-out}.video-js .vjs-share{display:flex;align-items:center;width:100%;height:100%;margin-top:10%;z-index:11;max-height:0}.video-js .vjs-share__subtitle{width:100%;display:none;margin:0 auto 0;font-size:11px;color:#fff;opacity:.7}.video-js .vjs-share__short-link-wrapper{position:relative;display:none;display:block;width:100%;height:30px;margin:0 auto;margin-bottom:0;border:0;color:rgba(255,255,255,.65);background-color:#363636;outline:none;overflow:hidden;flex-shrink:0}.video-js .vjs-share__short-link{display:none;width:100%;height:100%;padding:0 40px 0 0;border:0;color:rgba(255,255,255,.65);background-color:#363636;outline:none}.video-js .vjs-share__btn{position:absolute;right:0;bottom:0;height:40px;width:40px;display:none;align-items:center;padding:0 11px;border:0;color:#fff;background-color:#2e2e2e;background-size:18px 19px;background-position:center;background-repeat:no-repeat;cursor:pointer;outline:none;transition:width 0.3s ease-out,padding 0.3s ease-out}.video-js .vjs-share__socials{display:flex;align-items:center;margin:0 0 0 14px;justify-content:center;z-index:11;align-items:center;transition:width 0.3s ease-out,height 0.3s ease-out}.video-js .vjs-share__social{display:flex;justify-content:center;align-items:center;height:40px;width:40px;margin-right:11px;margin-bottom:25%;border-radius:30px;cursor:pointer;font-size:8px;transition:transform 0.3s ease-out,filter 0.2s ease-out;border:none;outline:none;z-index:11}.video-js .vjs-share__social:hover{filter:brightness(115%)}.video-js .vjs-share__social_tw{background-color:#1DA1F2}.video-js .vjs-share__social_reddit{background-color:#ff4500}.video-js .vjs-share__social_fbFeed{background-color:#4267B2}.video-js .vjs-share__social_messenger{background-color:#006AFF}.video-js .vjs-share__social_gp{background-color:#d53f35}.video-js .vjs-share__social_linkedin{background-color:#0077b5}.video-js .vjs-share__social_viber{background-color:#766db5}.video-js .vjs-share__social_telegram{background-color:#08c}.video-js .vjs-share__social_whatsapp{background-color:#25D366}.video-js .vjs-share__title{align-self:center;font-size:22px;display:none;color:#fff}
