@@ -5,9 +5,9 @@
 .vjs-modal-dialog .vjs-modal-dialog-content, 
 .video-js .vjs-modal-dialog, 
 .vjs-button > .vjs-icon-placeholder:before {  
-	display: flex-end;	
+	display: flex;	
 	align-items: flex-end;    
-	justiy-content: center;      
+	justify-content: center;      
 	position: absolute; 
 	top: 0;
 	left: 0;
