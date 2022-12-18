@@ -164,7 +164,7 @@
 /*-----------ICONS-----------*/
 .video-js .vjs-button {   
 	cursor: pointer;   
-	width: 39px;
+	width: 36px;
 	-webkit-transition: all .2s ease 0s;
         transition: all .2s ease 0s; 
 	vertical-align: middle
