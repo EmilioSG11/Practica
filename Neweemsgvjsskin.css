@@ -97,12 +97,11 @@
         height: 100%;
         width: 4em;
         flex: none;
-        font-family: Questrial;
+        font-family: bootstrap-icons, Questrial;
 }
 .video-js .vjs-control:before {
 	font-size: 150%;	
-	color: #fff;
-        font-family: Questrial;
+	color: #fff;        
 }
 .video-js .vjs-control-text {   
 	border: 0;   
@@ -113,8 +112,7 @@
 	visibility: hidden;   
 	padding: 0;   
 	position: absolute;
-	width: 1px;
-        font-family: Questrial,
+	width: 1px;        
 }
 .vjs-no-flex .vjs-control {
 	display: table-cell;
