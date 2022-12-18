@@ -91,13 +91,13 @@
 
 /*---CONTROL---*/
 .video-js .vjs-control {  
-        display: Flex;
+        display: flex;
 	align-items: center;    
 	justify-content: center;
-	width: 33px;;
+	width: 35px;;
 }
 .video-js .vjs-control:before {
-	font-size: 200%;
+	font-size: 150%;
 	line-height: 50px;   
 	color: #fff;
 }
