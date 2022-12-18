@@ -41,7 +41,7 @@
 .video-js .vjs-control-bar {
 	display: none;
 	width: 100%;
-        padding: 0 1%;       
+        padding: 0 2%;       
 	position: absolute;     
 	height: 50px;
 	background: rgba(0,0,0,.8);
