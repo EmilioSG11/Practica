@@ -96,8 +96,7 @@
         padding: 0;
         height: 100%;
         width: 4em;
-        flex: none;
-        font-family: bootstrap-icons, Questrial;
+        flex: none;       
 }
 .video-js .vjs-control:before {
 	font-size: 150%;	
@@ -140,6 +139,7 @@
   to {opacity: 0;}}
 
 .video-js .vjs-seek-to-live-control {  
+        font-family: Questrial;
 	font-weight: 400;
 	cursor: pointer;
 	padding: 0 10px;   
