@@ -413,7 +413,7 @@ ul li::before {
 	color: red;     
 }
 .vjs-menu li:hover {
-	color: "#fff";
+	color: #fff;
 	font-weight: 700;
 }
 
