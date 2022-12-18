@@ -89,11 +89,14 @@
 
 
 /*---CONTROL---*/
-.video-js .vjs-control {  
-        display: flex;
-	align-items: center;    
-	justify-content: center;
-	width: 35px;;
+.video-js .vjs-control {            
+	position: relative;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 100%;  
+	width: 36px;
+	flex: none;
 }
 .video-js .vjs-control:before {
 	font-size: 150%;	
