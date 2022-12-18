@@ -96,8 +96,7 @@
 	width: 35px;;
 }
 .video-js .vjs-control:before {
-	font-size: 150%;
-	line-height: 50px;   
+	font-size: 150%;	
 	color: #fff;
 }
 .video-js .vjs-control-text {   
