@@ -95,11 +95,13 @@
 	padding: 0;
 	height: 100%;
 	width: 35px;
-	flex: none;       
+	flex: none;
+        font-family: Questrial, Arial, Helvetica;	      
 }
 .video-js .vjs-control:before {
 	font-size: 150%;	
-	color: #fff;        
+	color: #fff;
+        font-family: Questrial, Arial, Helvetica;	      
 }
 .video-js .vjs-control-text {   
 	border: 0;   
@@ -110,7 +112,8 @@
 	visibility: hidden;   
 	padding: 0;   
 	position: absolute;
-	width: 1px;        
+	width: 1px; 
+        font-family: Questrial, Arial, Helvetica;	       
 }
 .vjs-no-flex .vjs-control {
 	display: table-cell;
