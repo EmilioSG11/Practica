@@ -347,13 +347,13 @@
 .video-js .vjs-progress-control:hover .vjs-play-progress:before {
 	-webkit-transform: scale(5);
 	transform: scale(5);     
-	opacity: 9.0;   
+	opacity: 1;   
 	background: #ff0048;
 }
 /*.video-js .vjs-progress-control .vjs-play-progress:before {
 	-webkit-transform: scale(5);
 	transform: scale(5);  
-	opacity: 9;  
+	opacity: 1;  
 	color: #fff;
 }*/
 /*^^^uncomment last setting if you want progress circle always visible^^^*/
