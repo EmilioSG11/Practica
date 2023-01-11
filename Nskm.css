@@ -1,0 +1,342 @@
+.vjs-button > .vjs-icon-placeholder:before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: VideoJS;
+}
+
+.vjs-luxmty-skin .vjs-play-control {
+  font-size: 1.2em;
+  font-family: VideoJS;
+  color: #ff0048;
+}
+.vjs-icon-play:before,
+.video-js .vjs-play-control .vjs-icon-placeholder:before {
+  content: "\f101";
+}
+.vjs-icon-pause:before,
+.video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder:before {
+  content: "\f103";
+}
+
+.vjs-luxmty-skin .vjs-mute-control {
+  
+}
+.vjs-icon-volume-mute:before,
+.vjs-luxmty-skin .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder:before {
+  content: "\f104";
+  font-size: 15px;
+  color: #ff0048;
+}
+.vjs-icon-volume-high:before,
+.vjs-luxmty-skin .vjs-mute-control.vjs-vol-3 .vjs-icon-placeholder:before {
+  content: "\f107";
+  font-size: 15.32px;
+  color: #fff;
+}
+
+.video-js .vjs-fullscreen-control {
+  cursor: pointer;
+  float: right;
+  color: #ff0048;
+  font-size: 1.3em;
+}
+.vjs-icon-fullscreen-enter:before,
+.video-js .vjs-fullscreen-control .vjs-icon-placeholder:before {  
+  content: "\F108";
+  color: #ff0048;
+}
+
+.vjs-icon-picture-in-picture-enter:before,
+.video-js .vjs-picture-in-picture-control .vjs-icon-placeholder:before {
+  font-family: VideoJS;
+  font-size: 16px;
+  color: #fff;
+  content: "\f121";
+}
+
+.video-js .vjs-subs-caps-button .vjs-icon-placeholder:before {
+  font-family: VideoJS;
+  font-size: 17px;
+  color: #fff;
+  content: "\f10d";
+}
+
+/*---Icon HD---*/
+.vjs-luxmty-skin .vjs-icon-hd:before {
+  font-family: VideoJS;
+  content: "\f110";
+  font-size: 16.5px;
+  color: #fff;
+}
+
+.vjs-icon-audio:before,
+.video-js .vjs-audio-button .vjs-icon-placeholder:before {
+  font-family: VideoJS;
+  font-size: 16px;
+  color: #fff;
+  content: "\f11e";
+}
+
+/*CONTROL AND ONTROL BAR*/
+.video-js .vjs-control-bar {
+  display: none;
+  width: 100%;
+  padding: 0 1.5%;
+  position: absolute;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 7;
+}
+.vjs-has-started .vjs-control-bar {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transform-origin: left bottom;
+  transition: all 0.15s cubic-bezier(0.15, 0.16, 0.71, 0.71), width 0s, left 0s;
+}
+.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  visibility: hidden;
+  opacity: 0;
+  -moz-transform: translate(-10px, 20px);  
+  -webkit-transform: translate(-10px, 20px);
+  transform: translate(-10px, 20px);
+  transition: 0.15s cubic-bezier(0.15, 0.16, 0.71, 0.71);
+}
+.vjs-controls-disabled .vjs-control-bar,
+.vjs-using-native-controls .vjs-control-bar,
+.vjs-error .vjs-control-bar {
+  display: none !important;
+}
+.vjs-audio.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  opacity: 1;
+  visibility: visible;
+}
+.vjs-has-started.vjs-no-flex .vjs-control-bar {
+  display: table;
+}
+
+.video-js .vjs-control {
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 34px;
+  flex: none;
+}
+.video-js .vjs-control:before {
+  font-size: 200%;
+  color: #ff0048;
+}
+.video-js .vjs-control-text {
+  border: 0;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  font-family: Questrial, Arial, Helvetica;
+}
+.vjs-no-flex .vjs-control {
+  display: table-cell;
+  vertical-align: middle;
+}
+.video-js .vjs-control:focus:before,
+.video-js .vjs-control:hover:before,
+.video-js .vjs-control:focus {
+  text-shadow: 0em 0em 0em;
+}
+.video-js .vjs-custom-control-spacer {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+
+.vjs-error .vjs-error-display .vjs-modal-dialog-content {
+	font-size: 1.9em;
+	font-weight: 300;
+	text-align: right;
+	display: flex;
+	justify-content: flex-end;
+}
+.vjs-error .vjs-error-display:before {
+	content: "";
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	background-image: url("https://www.readyartwork.com/wp-content/uploads/2019/02/RAWR-404-Page.gif");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/*---Loading Spinner---*/
+.vjs-luxmty-skin .vjs-loading-spinner {    
+	width: 3rem;
+	height: 3.81rem;
+	top: 50%;
+	left: calc(50% + 6px);
+	float: right; 
+  border: none;
+	opacity: 0;
+	visibility: hidden;
+	animation: vjs-spinner-fade-out 2s linear 1;
+	animation-delay: 2s;
+}
+.vjs-luxmty-skin .vjs-loading-spinner:before,
+.vjs-luxmty-skin .vjs-loading-spinner:after {
+	border: none;
+}
+.vjs-luxmty-skin .vjs-loading-spinner:after {
+	background-image: url(https://raw.githubusercontent.com/EmilioSG11/Practica/main/Casi/Rolling-0.8s-160px.svg);
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+	z-index: 6;
+}
+.vjs-seeking .vjs-loading-spinner:after,
+.vjs-waiting .vjs-loading-spinner:after {
+	opacity: 1;
+	animation: vjs-spinner-spin 2.3s linear infinite,
+		vjs-spinner-fade 0.1s linear 0 !important;
+	animation-delay: 1s;
+}
+.vjs-seeking .vjs-loading-spinner,
+.vjs-waiting .vjs-loading-spinner {
+	opacity: 1;
+	visibility: visible;
+	animation: vjs-spinner-fade-in 0s linear 0;
+	animation-delay: 0s;
+}
+
+@keyframes vjs-spinner-fade-in {
+	0% {
+		opacity: 0;
+		visibility: visible;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes vjs-spinner-fade-out {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+	100% {
+		opacity: 0;
+		visibility: visible;
+	}
+}
+
+/*---Progress Control---*/
+.video-js .vjs-control-bar .vjs-progress-control {
+  /*position: absolute;
+  height: 2.5em;
+  margin: -1.44em 0;*/
+  width: 100%;
+  left: 0;
+  background-color: transparent;
+  flex: auto;
+  display: flex;
+  cursor: pointer;
+}
+.video-js .vjs-load-progress {
+  background: rgba(255, 0, 72, 1);
+}
+.video-js .vjs-load-progress div {
+  background: rgba(255, 0, 72, 0);
+}
+.video-js .vjs-play-progress {
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.25s linear;
+}
+.video-js .vjs-progress-control .vjs-progress-holder,
+.video-js .vjs-progress-control:hover .vjs-progress-holder {
+  font-size: 1.4em;
+}
+.video-js .vjs-play-progress,
+.video-js .vjs-play-progress:before {
+  background-color: #fff;
+}
+.video-js .vjs-play-progress:before {
+  height: 0.8em;
+  width: 0.8em;
+  content: "";
+  border: 4px solid #fff;
+  border-radius: 0.8em;
+  top: -0.25em;
+}
+.video-js .vjs-progress-control {
+  font-size: 13px;
+}
+.video-js .vjs-progress-control .vjs-play-progress:before {
+  height: 0.7em;
+  width: 0.7em;
+  border: 3.5px solid #fff;
+  border-radius: 0.8em;
+  top: -0.18em;
+  right: -0.4em;
+  opacity: 1;
+  background: #ff0048;
+  transition: all 0.3s ease 0s;
+  transform-origin: center;
+}
+.video-js .vjs-progress-control:hover .vjs-play-progress:before {
+  height: 0.75em;
+  width: 0.75em;
+  border: 3.9px solid #fff;
+  border-radius: 0.8em;
+  top: -0.23em;
+  right: -0.4em;
+  opacity: 1;
+  background: #ff0048;
+}
+
+.video-js .vjs-progress-holder .vjs-play-progress,
+.video-js .vjs-progress-holder .vjs-load-progress,
+.video-js .vjs-progress-holder .vjs-load-progress div {
+  position: absolute;
+  display: block;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+}
+.video-js .vjs-progress-holder {
+  flex: auto;
+  transition: all 0.2s;
+  height: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0.9px rgba(0, 0, 0, 0.2);
+}
+.video-js.vjs-user-inactive .vjs-progress-control .vjs-mouse-display {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 1s;
+}
+.video-js .vjs-button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0;
+  cursor: pointer;
+  width: 35px;
+  transition: all 0.2s ease 0s;
+  vertical-align: middle;
+}
